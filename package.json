@@ -1,0 +1,65 @@
+{
+  "name": "@dawpm/core",
+  "version": "1.0.0",
+  "description": "Core library for dawpm: schemas, manifest, registry client, installer, and DAW adapters.",
+  "license": "MIT",
+  "keywords": ["dawpm", "daw", "vst", "vst3", "fl-studio", "package-manager"],
+  "homepage": "https://github.com/dawpm/core#readme",
+  "bugs": { "url": "https://github.com/dawpm/core/issues" },
+  "repository": { "type": "git", "url": "git+https://github.com/dawpm/core.git" },
+  "author": "Yann Cotineau",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./schemas": {
+      "types": "./dist/schemas/index.d.ts",
+      "import": "./dist/schemas/index.js"
+    },
+    "./adapters/fl-studio": {
+      "types": "./dist/daw/fl-studio.d.ts",
+      "import": "./dist/daw/fl-studio.js"
+    }
+  },
+  "files": [
+    "dist",
+    "assets",
+    "spec",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "ini": "^4.1.3",
+    "micromatch": "^4.0.8",
+    "undici": "^6.19.8",
+    "yaml": "^2.5.1",
+    "yauzl": "^3.1.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/ini": "^4.1.1",
+    "@types/micromatch": "^4.0.9",
+    "@types/node": "^20.14.10",
+    "@types/yauzl": "^2.10.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

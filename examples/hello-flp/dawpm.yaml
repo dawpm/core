@@ -1,0 +1,7 @@
+name: hello-flp
+daw: fl-studio
+project: hello-flp.flp
+description: Minimal example dawpm project for FL Studio.
+license: MIT
+dependencies:
+  - dsk/overture
