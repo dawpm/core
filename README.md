@@ -2,7 +2,7 @@
 
 The shared library behind [dawpm](https://github.com/dawpm/dawpm).
 
-It's not meant to be used directly — install [`@dawpm/cli`](https://www.npmjs.com/package/@dawpm/cli) instead. This package contains:
+Install [`@dawpm/cli`](https://www.npmjs.com/package/@dawpm/cli) instead of using this package directly. This package contains:
 
 - Zod schemas for the manifest, lockfile, and registry index
 - A typed registry client
